@@ -113,7 +113,8 @@ namespace RecursiveCircleBasic
             {
                 // You can add image files to your project resources and access them like this:
                 //return Resources.IconForThisComponent;
-                return null;
+                //Icon made by [https://www.flaticon.com/authors/those-icons] from www.flaticon.com 
+                return RecursiveCircleBasic.Properties.Resources.recursiveIcon;
             }
         }
 
