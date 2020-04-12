@@ -5,51 +5,30 @@ using Grasshopper.Kernel;
 using Rhino.Geometry;
 using System.Linq;
 
-// In order to load the result of this wizard, you will also need to
-// add the output bin/ folder of this project to the list of loaded
-// folder in Grasshopper.
-// You can use the _GrasshopperDeveloperSettings Rhino command for that.
 
 namespace RecursiveCircleBasic
 {
     public class RecursiveCircleBasicComponent : GH_Component
     {
-        /// <summary>
-        /// Each implementation of GH_Component must provide a public 
-        /// constructor without any arguments.
-        /// Category represents the Tab in which the component will appear, 
-        /// Subcategory the panel. If you use non-existing tab or panel names, 
-        /// new tabs/panels will automatically be created.
-        /// </summary>
-        public RecursiveCircleBasicComponent()
-          : base("RecursiveCircleBasic", "RecursiveCircleBasic",
-              "Description",
-              "User", "test")
+        //Constructor
+        public RecursiveCircleBasicComponent() : base("RecursiveCircleBasic", "RCB", "Description", "User", "test")
         {
         }
 
-        /// <summary>
-        /// Registers all the input parameters for this component.
-        /// </summary>
+        //Input
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
             pManager.AddNumberParameter("Radius", "R", "Radius of the Origin circle", GH_ParamAccess.item);
             pManager.AddIntegerParameter("Level", "L", "Level of recursive depth", GH_ParamAccess.item);
         }
 
-        /// <summary>
-        /// Registers all the output parameters for this component.
-        /// </summary>
+        //Output
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
             pManager.AddCircleParameter("Circles", "C", "Recursive circles", GH_ParamAccess.list);
         }
 
-        /// <summary>
-        /// This is the method that actually does the work.
-        /// </summary>
-        /// <param name="DA">The DA object can be used to retrieve data from input parameters and 
-        /// to store data in output parameters.</param>
+        //Method (Entry point)
         protected override void SolveInstance(IGH_DataAccess DA)
         {
             //Declare placeholder variables for the input data.
@@ -61,15 +40,15 @@ namespace RecursiveCircleBasic
             if(!DA.GetData(1, ref level)) { return; }
 
             //Set a (initial) List of circles.
-            List<Circle> circles = new List<Circle>();
+            var circles = new List<Circle>();
 
             //Create a new circle and add a (initial) List
-            Circle circle01 = new Circle(new Point3d(0, 0, 0), radius);
+            var circle01 = new Circle(new Point3d(0, 0, 0), radius);
             circles.Add(circle01);
 
             //Set two List for recursive process.
-            List<Circle> tempList01 = new List<Circle>();
-            List<Circle> tempList02 = new List<Circle>();
+            var tempList01 = new List<Circle>();
+            var tempList02 = new List<Circle>();
             tempList01 = circles;
 
             //Recursive loop.
@@ -87,15 +66,16 @@ namespace RecursiveCircleBasic
         }
 
         /// <summary>
+        /// Method
         /// This is the method that create circles for recursive process.
         /// </summary>
         public List<Circle> CreateRecursiveCircle(double radius, List<Circle> circles)
         {
-            List<Circle> newCircles = new List<Circle>();
+            var newCircles = new List<Circle>();
             foreach(Circle circle in circles)
             {
                 double newRadius = circle.Radius / 2;
-                Circle newCircle = new Circle(new Point3d(newRadius, 0, 0), newRadius);
+                var newCircle = new Circle(new Point3d(newRadius, 0, 0), newRadius);
                 newCircles.Add(newCircle);
 
             }
