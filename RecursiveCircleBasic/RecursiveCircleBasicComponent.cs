@@ -84,29 +84,13 @@ namespace RecursiveCircleBasic
   
         }
 
-        /// <summary>
-        /// Provides an Icon for every component that will be visible in the User Interface.
-        /// Icons need to be 24x24 pixels.
-        /// </summary>
-        protected override System.Drawing.Bitmap Icon
-        {
-            get
-            {
-                // You can add image files to your project resources and access them like this:
-                //return Resources.IconForThisComponent;
-                //Icon made by [https://www.flaticon.com/authors/those-icons] from www.flaticon.com 
-                return RecursiveCircleBasic.Properties.Resources.recursiveIcon;
-            }
-        }
+       
 
-        /// <summary>
-        /// Each component must have a unique Guid to identify it. 
-        /// It is vital this Guid doesn't change otherwise old ghx files 
-        /// that use the old ID will partially fail during loading.
-        /// </summary>
-        public override Guid ComponentGuid
-        {
-            get { return new Guid("b0445f3e-f7fe-4706-aeb9-646267eeb5c8"); }
-        }
+        //Icon made by [https://www.flaticon.com/authors/those-icons] from www.flaticon.com 
+        protected override System.Drawing.Bitmap Icon => RecursiveCircleBasic.Properties.Resources.recursiveIcon;
+
+        public override GH_Exposure Exposure => GH_Exposure.primary | GH_Exposure.obscure;
+
+        public override Guid ComponentGuid => new Guid("{34E1E949-A9F6-48F4-A3C3-D0D6B972E0A6}");
     }
 }
