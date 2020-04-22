@@ -11,7 +11,7 @@ namespace RecursiveCircleBasic
     public class RecursiveCircleBasicComponent : GH_Component
     {
         //Constructor
-        public RecursiveCircleBasicComponent() : base("RecursiveCircleBasic", "RCB", "Description", "User", "test")
+        public RecursiveCircleBasicComponent() : base("RecursiveCircleBasic", "RCB", "Description", "User", "Default")
         {
         }
 
