@@ -7,7 +7,6 @@ using Rhino.Geometry;
 
 namespace RecursiveCircleBasic
 {
-    
     /// <summary>
     /// Recursive Circle(alternative version)
     /// multi-threading component intherit from GH_TaskCapableComponent
@@ -62,6 +61,7 @@ namespace RecursiveCircleBasic
             //Set two list for recursive process
             var tempList01 = new List<Circle>();
             var tempList02 = new List<Circle>();
+            tempList01 = circles;
 
             //Recursive loop
             int i = 0;
@@ -70,13 +70,11 @@ namespace RecursiveCircleBasic
                 tempList02 = CreateRecursiveCircle(radius, tempList01);
                 tempList01 = tempList02;
                 circles.AddRange(tempList01);
-
                 i++;
             }
             result.Value = circles;
 
             return result;
-
         }
 
         public static List<Circle> CreateRecursiveCircle(double radius, List<Circle> circles)
@@ -91,7 +89,6 @@ namespace RecursiveCircleBasic
             }
 
             return newCircles;
-
         }
 
         protected override void SolveInstance(IGH_DataAccess DA)
@@ -128,11 +125,7 @@ namespace RecursiveCircleBasic
             {
                 DA.SetDataList(0, result.Value);
             }
-          
         }
-
-        
-
 
         protected override System.Drawing.Bitmap Icon => null;
 
@@ -140,7 +133,5 @@ namespace RecursiveCircleBasic
 
         public override Guid ComponentGuid => new Guid("{16D76F52-9038-4FA9-B771-E4DFB9122BC1}");
 
-
     }
-
 }
