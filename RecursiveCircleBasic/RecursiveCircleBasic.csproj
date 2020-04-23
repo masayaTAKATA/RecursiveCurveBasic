@@ -64,6 +64,7 @@
     <Compile Include="RecursiveCircleBasicComponent.cs" />
     <Compile Include="RecursiveCircleBasicInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecursiveCircleBasicTaskComponent.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
