@@ -93,15 +93,15 @@ namespace RecursiveCircleBasic
 
         protected override void SolveInstance(IGH_DataAccess DA)
         {
+            //Declare placeholder valuables for the input data
+            double radius = double.NaN;
+            int level = 1;
+            //Retrieve input data
+            if (!DA.GetData(0, ref radius)) { return; }
+            if (!DA.GetData(1, ref level)) { return; }
+
             if (InPreSolve)
             {
-                //Declare placeholder valuables for the input data
-                double radius = double.NaN;
-                int level = 1;
-                //Retrieve input data
-                if (!DA.GetData(0, ref radius)) { return; }
-                if (!DA.GetData(1, ref level)) { return; }
-
                 //Queue up the task
                 Task<SolveResults> task = Task.Run(() => ComputeReCursiveCircles(radius, level), CancelToken);
                 TaskList.Add(task);
@@ -110,12 +110,6 @@ namespace RecursiveCircleBasic
 
             if(!GetSolveResults(DA, out SolveResults result))
             {
-                double radius = double.NaN;
-                int level = 1;
-
-                DA.GetData(0, ref radius);
-                DA.GetData(1, ref level);
-
                 //Compute results on a given data
                 result = ComputeReCursiveCircles(radius, level);
             }
