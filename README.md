@@ -1,4 +1,4 @@
 # RecursiveCircleBasic
-Circle pattern base for recursion 
-Grasshopper component basic test for practice  
-テスト用
+### Circle recursive pattern Grasshopper component for practice  
+Standard and multi-threading class
+
