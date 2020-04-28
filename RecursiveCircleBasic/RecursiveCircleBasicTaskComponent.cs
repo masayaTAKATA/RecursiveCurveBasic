@@ -121,7 +121,8 @@ namespace RecursiveCircleBasic
             }
         }
 
-        protected override System.Drawing.Bitmap Icon => null;
+        //Icon made by [https://www.flaticon.com/authors/those-icons] from www.flaticon.com 
+        protected override System.Drawing.Bitmap Icon => RecursiveCircleBasic.Properties.Resources.recursiveIcon;
 
         public override GH_Exposure Exposure => GH_Exposure.primary | GH_Exposure.obscure;
 
