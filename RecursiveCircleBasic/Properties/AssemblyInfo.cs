@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("RecursiveCircleBasic")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("meenaxydesign")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("RecursiveCircleBasic")]
-[assembly: AssemblyCopyright("Copyright © meenaxydesign 2018-2020")]
+[assembly: AssemblyCopyright("Copyright © 2018-2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
