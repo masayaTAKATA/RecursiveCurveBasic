@@ -2,7 +2,7 @@
 using System.Drawing;
 using Grasshopper.Kernel;
 
-namespace RecursiveCircleBasic
+namespace RecursiveCurveBasic
 {
     public class RecursiveCircleBasicInfo : GH_AssemblyInfo
     {

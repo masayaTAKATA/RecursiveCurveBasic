@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Grasshopper.Kernel;
 using Rhino.Geometry;
 
-namespace RecursiveCircleBasic
+namespace RecursiveCurveBasic
 {
     /// <summary>
     /// Recursive Circle(alternative version)
@@ -122,7 +122,7 @@ namespace RecursiveCircleBasic
         }
 
         //Icon made by [https://www.flaticon.com/authors/those-icons] from www.flaticon.com 
-        protected override System.Drawing.Bitmap Icon => RecursiveCircleBasic.Properties.Resources.recursiveIcon;
+        protected override System.Drawing.Bitmap Icon => RecursiveCurveBasic.Properties.Resources.recursiveIcon;
 
         public override GH_Exposure Exposure => GH_Exposure.primary | GH_Exposure.obscure;
 
