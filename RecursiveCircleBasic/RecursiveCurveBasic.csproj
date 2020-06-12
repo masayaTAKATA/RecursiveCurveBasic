@@ -74,7 +74,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\recursiveIcon.png" />
+    <None Include="Resources\c-sharp.png" />
+    <EmbeddedResource Include="Resources\meenaxyLogo.png" />
+    <EmbeddedResource Include="Resources\recursiveIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

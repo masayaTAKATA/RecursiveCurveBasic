@@ -14,7 +14,7 @@ namespace RecursiveCurveBasic
     public class RecursiveCircleBasicTaskComponent : GH_TaskCapableComponent<RecursiveCircleBasicTaskComponent.SolveResults>
     {
         //Constructor
-        public RecursiveCircleBasicTaskComponent() : base("RecursiveCircleBasic_Task", "RCB_t", "Multi-threading compute Recursive Circel", "User", "Test")
+        public RecursiveCircleBasicTaskComponent() : base("RecursiveCircleBasic_Task", "RCB_t", "Multi-threading compute Recursive Circel", "Meenaxy", "Test")
         {
         }
 

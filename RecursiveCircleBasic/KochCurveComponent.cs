@@ -9,7 +9,7 @@ namespace RecursiveCurveBasic
     public class KochCurveComponent : GH_Component
     {
         //Constructor
-        public KochCurveComponent() : base("Koch curve", "KochCRV", "Generate the Koch curve form two point", "User", "Default")
+        public KochCurveComponent() : base("Koch curve", "KochCRV", "Generate the Koch curve form two point", "Meenaxy", "Default")
         {
         }
 
