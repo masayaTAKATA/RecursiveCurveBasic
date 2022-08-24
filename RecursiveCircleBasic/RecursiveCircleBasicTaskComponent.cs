@@ -35,7 +35,7 @@ namespace RecursiveCurveBasic
         ///2. Compute results on given data
         ///3. Set output data
         ///</summary>
-        
+
         public class SolveResults
         {
             public List<Circle> Value { get; set; }
@@ -46,7 +46,7 @@ namespace RecursiveCurveBasic
         /// Create a Compute function that takes the input retrieve from IGH_DataAccess
         /// and returns an instance of SolveResults
         /// </summary>
-        
+
         private static SolveResults ComputeReCursiveCircles(double radius, int level)
         {
             var result = new SolveResults();
@@ -121,7 +121,7 @@ namespace RecursiveCurveBasic
             }
         }
 
-        //Icon made by [https://www.flaticon.com/authors/those-icons] from www.flaticon.com 
+        //Icon made by [https://www.flaticon.com/authors/those-icons] from www.flaticon.com
         protected override System.Drawing.Bitmap Icon => RecursiveCurveBasic.Properties.Resources.recursiveIcon;
 
         public override GH_Exposure Exposure => GH_Exposure.primary | GH_Exposure.obscure;

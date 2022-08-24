@@ -80,12 +80,10 @@ namespace RecursiveCurveBasic
             }
 
             return newCircles;
-  
+
         }
 
-       
-
-        //Icon made by [https://www.flaticon.com/authors/those-icons] from www.flaticon.com 
+        //Icon made by [https://www.flaticon.com/authors/those-icons] from www.flaticon.com
         protected override System.Drawing.Bitmap Icon => RecursiveCurveBasic.Properties.Resources.recursiveIcon;
 
         public override GH_Exposure Exposure => GH_Exposure.primary | GH_Exposure.obscure;
